@@ -1,3 +1,5 @@
+import {describe} from "mocha";
+
 const expect = chai.expect;
 import Vue from 'vue'
 import Button from '../src/button'
