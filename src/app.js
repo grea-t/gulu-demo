@@ -65,6 +65,7 @@ const expect = chai.expect
     button.$el.remove()
     button.$destroy()
 }
+/*
 {
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
@@ -80,4 +81,4 @@ const expect = chai.expect
     let button = vm.$el
     button.click()
     expect(spy).to.have.been.called()
-}
+}*/

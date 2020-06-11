@@ -23065,7 +23065,7 @@ module.exports = require('./lib/chai');
 
 var _vue = _interopRequireDefault(require("vue"));
 
-var _button4 = _interopRequireDefault(require("./button"));
+var _button3 = _interopRequireDefault(require("./button"));
 
 var _icon = _interopRequireDefault(require("./icon"));
 
@@ -23075,7 +23075,7 @@ var _chai = _interopRequireDefault(require("chai"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_vue.default.component('g-button', _button4.default);
+_vue.default.component('g-button', _button3.default);
 
 _vue.default.component('g-icon', _icon.default);
 
@@ -23092,7 +23092,7 @@ new _vue.default({
 var expect = _chai.default.expect; //单元测试
 
 {
-  var Constructor = _vue.default.extend(_button4.default);
+  var Constructor = _vue.default.extend(_button3.default);
 
   var button = new Constructor({
     propsData: {
@@ -23107,7 +23107,7 @@ var expect = _chai.default.expect; //单元测试
   button.$destroy();
 }
 {
-  var _Constructor = _vue.default.extend(_button4.default);
+  var _Constructor = _vue.default.extend(_button3.default);
 
   var _button = new _Constructor({
     propsData: {
@@ -23132,7 +23132,7 @@ var expect = _chai.default.expect; //单元测试
   var div = document.createElement('div');
   document.body.appendChild(div);
 
-  var _Constructor2 = _vue.default.extend(_button4.default);
+  var _Constructor2 = _vue.default.extend(_button3.default);
 
   var _button2 = new _Constructor2({
     propsData: {
@@ -23153,26 +23153,23 @@ var expect = _chai.default.expect; //单元测试
 
   _button2.$destroy();
 }
+/*
 {
-  var _Constructor3 = _vue.default.extend(_button4.default);
-
-  var vm = new _Constructor3({
-    propsData: {
-      icon: 'settings'
-    }
-  });
-  vm.$mount();
-
-  var spy = _chai.default.spy(function () {});
-
-  vm.$on('click', spy); //希望这个函数被执行
-
-  var _button3 = vm.$el;
-
-  _button3.click();
-
-  expect(spy).to.have.been.called();
-}
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+        propsData: {
+            icon: 'settings'
+        }
+    })
+    vm.$mount()
+    let spy = chai.spy(function () {
+    })
+    vm.$on('click', spy)
+    //希望这个函数被执行
+    let button = vm.$el
+    button.click()
+    expect(spy).to.have.been.called()
+}*/
 },{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./button-group":"src/button-group.vue","chai":"node_modules/chai/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
