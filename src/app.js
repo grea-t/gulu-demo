@@ -17,6 +17,7 @@ new Vue({
 })
 
 import chai from 'chai'
+
 const expect = chai.expect
 //单元测试
 {
@@ -59,7 +60,7 @@ const expect = chai.expect
     })
     button.$mount(div)
     let svg = button.$el.querySelector('svg')
-    let { order } = window.getComputedStyle(svg)
+    let {order} = window.getComputedStyle(svg)
     expect(order).to.eq('1')
     button.$el.remove()
     button.$destroy()
@@ -72,7 +73,8 @@ const expect = chai.expect
         }
     })
     vm.$mount()
-    let spy = chai.spy(function () {})
+    let spy = chai.spy(function () {
+    })
     vm.$on('click', spy)
     //希望这个函数被执行
     let button = vm.$el
