@@ -48,10 +48,6 @@
         }
     }
     ```
-4.引入svg symbols
-    ```
-    <script src="//at.alicdn.com/t/font_1875769_uqz2gq2a3r.js"></script>
-    ```
 
 ##文档
 
