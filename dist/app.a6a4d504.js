@@ -12895,7 +12895,13 @@ exports.default = void 0;
 var _default = {
   name: 'GuluRow',
   props: {
-    gutter: [Number, String]
+    gutter: [Number, String],
+    align: {
+      type: String,
+      validator: function validator(value) {
+        return ['left', 'right', 'center'].includes(value);
+      }
+    }
   },
   mounted: function mounted() {
     var _this = this;
@@ -12911,6 +12917,10 @@ var _default = {
         marginLeft: -gutter / 2 + 'px',
         marginRight: -gutter / 2 + 'px'
       };
+    },
+    rowClass: function rowClass() {
+      var align = this.align;
+      return [align && "align-".concat(align)];
     }
   }
 };
@@ -12929,7 +12939,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "row", style: _vm.rowStyle },
+    { staticClass: "row", class: _vm.rowClass, style: _vm.rowStyle },
     [_vm._t("default")],
     2
   )
@@ -13129,7 +13139,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51789" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51246" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

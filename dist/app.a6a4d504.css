@@ -111,9 +111,14 @@
 .row[data-v-fa646d] {
   display: flex;
 }
-.col[data-v-6b9943] {
-  height: 50px;
-  width: 50%;
+.row.align-left[data-v-fa646d] {
+  justify-content: flex-start;
+}
+.row.align-right[data-v-fa646d] {
+  justify-content: flex-end;
+}
+.row.align-center[data-v-fa646d] {
+  justify-content: center;
 }
 .col.col-1[data-v-6b9943] {
   width: 4.1666666667%;
