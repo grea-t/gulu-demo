@@ -8,39 +8,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>轮子</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
-
-        html {
-            --button-height: 32px;
-            --font-size: 14px;
-            --button-bg: white;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color: #333;
-            --border-color: #999;
-            --border-color-hover: #666;
-        }
-
-        #app {
-            margin: 20px;
-        }
-
+        * {margin: 0;padding: 0;box-sizing: border-box}
+        html {--button-height: 32px;--font-size: 14px;
+            --button-bg: white;--button-active-bg: #eee;
+            --border-radius: 4px;--color: #333;--border-color: #999;
+            --border-color-hover: #666;}
+        #app {}
         body {
             font-size: var(--font-size);
         }
     </style>
     <style>
-        .box{
-            margin: 20px;
+        .demo{
+            border: 1px solid red;
+            min-height: 100px;
         }
     </style>
 </head>
 <body>
 <div id="app">
+    <g-layout style="height: 100vh">
+        <g-header class="demo">header</g-header>
+        <g-layout>
+            <g-sider class="demo">sider</g-sider>
+            <g-content class="demo">content</g-content>
+        </g-layout>
+        <g-footer class="demo">footer</g-footer>
+    </g-layout>
+    <hr>
     <g-row gutter="20">
         <g-col span="24"
         :ipad="{span:8}">1</g-col>
