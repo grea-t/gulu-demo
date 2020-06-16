@@ -46,9 +46,9 @@
                 return [
                     ...createClasses({span, offset}),
                     ...createClasses(ipad, 'ipad-'),
-                    ...createClasses(narrowPc, 'narrowPc-'),
+                    ...createClasses(narrowPc, 'narrow-pc-'),
                     ...createClasses(pc, 'pc-'),
-                    ...createClasses(widePc, 'widePc-')
+                    ...createClasses(widePc, 'wide-pc-')
                 ]
             },
             colStyle() {
