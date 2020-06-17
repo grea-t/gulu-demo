@@ -28,18 +28,23 @@ Vue.component('g-toast', Toast)
 Vue.use(plugin)
 
 new Vue({
-    el: '#app',
-    data: {
-        loading1: false,
-        loading2: true,
-        loading3: false
+  el: '#app',
+  data: {
+    loading1: false,
+    loading2: true,
+    loading3: false,
+    message: 'hi'
+  },
+  created() {
+    this.$toast('<strong>hi</strong>', {
+      enableHtml: true
+    })
+  },
+  methods: {
+    inputChange() {
+      console.log(1)
     },
-    methods: {
-        inputChange() {
-            console.log(1)
-        },
-        showToast(){
-            this.$toast('我是message')
-        }
+    showToast() {
     }
+  }
 })
