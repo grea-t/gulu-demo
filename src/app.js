@@ -42,9 +42,18 @@ new Vue({
   created() {
   },
   methods: {
-    showToast() {
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(position) {
       this.$toast('你需要充值', {
-        position: 'middle',
+        position,
         enableHtml: false,
         closeButton: {
           text: '已充值',
@@ -52,8 +61,7 @@ new Vue({
             console.log('他充值了')
           }
         },
-        autoClose: true,
-        autoCloseDelay: 3
+        autoClose: 3,
       })
     }
   }
