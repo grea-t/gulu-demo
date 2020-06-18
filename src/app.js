@@ -27,6 +27,10 @@ Vue.component('g-content', Content)
 Vue.component('g-toast', Toast)
 Vue.use(plugin)
 
+import createElement from 'vue'
+
+const h = createElement
+
 new Vue({
   el: '#app',
   data: {
@@ -36,14 +40,20 @@ new Vue({
     message: 'hi'
   },
   created() {
-    this.$toast('<strong>hi</strong>', {
-      enableHtml: true
+    this.$toast('你需要充值', {
+      position: 'bottom',
+      enableHtml: false,
+      closeButton: {
+        text: '已充值',
+        callback() {
+          console.log('他充值了')
+        }
+      },
+      autoClose: true,
+      autoCloseDelay: 3
     })
   },
   methods: {
-    inputChange() {
-      console.log(1)
-    },
     showToast() {
     }
   }
