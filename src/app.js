@@ -40,21 +40,21 @@ new Vue({
     message: 'hi'
   },
   created() {
-    this.$toast('你需要充值', {
-      position: 'bottom',
-      enableHtml: false,
-      closeButton: {
-        text: '已充值',
-        callback() {
-          console.log('他充值了')
-        }
-      },
-      autoClose: true,
-      autoCloseDelay: 3
-    })
   },
   methods: {
     showToast() {
+      this.$toast('你需要充值', {
+        position: 'middle',
+        enableHtml: false,
+        closeButton: {
+          text: '已充值',
+          callback() {
+            console.log('他充值了')
+          }
+        },
+        autoClose: true,
+        autoCloseDelay: 3
+      })
     }
   }
 })

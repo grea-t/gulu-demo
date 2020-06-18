@@ -78,7 +78,9 @@
   $font-size: 14px;
   $toast-min-height: 40px;
   $toast-bg: rgba(0, 0, 0, 0.75);
+  @keyframes fade { 0% {opacity: 0} 100% {opacity: 1} }
   .toast {
+    animation: fade 1s;
     background: $toast-bg;
     position: fixed;
     left: 50%;
