@@ -44,7 +44,7 @@
     },
     computed: {
       toastClasses() {
-        return {[`$position-${this.pisition}`]: true}
+        return {[`position-${this.position}`]: true}
       }
     },
     methods: {
@@ -58,19 +58,18 @@
         if (this.autoClose) {
           setTimeout(() => {
             this.close()
-          }, this.autoCloseDelay * 1000)
+          }, this.autoClose * 1000)
         }
       },
       close() {
         this.$el.remove()
         this.$emit('close')
         this.$destroy()
-      }
-      ,
+      },
       onClickClose() {
         this.close()
         if (this.closeButton && typeof this.closeButton.callback === 'function') {
-          this.closeButton.callback()
+          this.closeButton.callback(this)
         }
       }
     }
@@ -80,16 +79,9 @@
   $font-size: 14px;
   $toast-min-height: 40px;
   $toast-bg: rgba(0, 0, 0, 0.75);
-  $animation-duration: 300ms;
   @keyframes slide-up {
-    0% {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
+    0% {opacity: 0;transform: translateY(100%);}
+    100% {opacity: 1;transform: translateY(0%);}
   }
 
   @keyframes slide-down {
@@ -116,6 +108,7 @@
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    $animation-duration: 300ms;
 
     &.position-top {
       top: 0;
@@ -127,7 +120,7 @@
       }
     }
 
-    &.position-Bottom {
+    &.position-bottom {
       bottom: 0;
 
       .toast {
