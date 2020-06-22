@@ -45,21 +45,18 @@ const h = createElement
 new Vue({
   el: '#app',
   data: {
-    loading1: false,
-    loading2: true,
-    loading3: false,
-    message: 'hi'
+    selectedTab: 'news'
   },
   created() {
   },
   methods: {
-    showToast1(){
+    showToast1() {
       this.showToast('top')
     },
-    showToast2(){
+    showToast2() {
       this.showToast('middle')
     },
-    showToast3(){
+    showToast3() {
       this.showToast('bottom')
     },
     showToast(position) {
