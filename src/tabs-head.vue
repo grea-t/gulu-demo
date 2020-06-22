@@ -34,7 +34,7 @@
     > .line {
       position: absolute;
       bottom: 0;
-      border-bottom: 2px solid $blue;
+      border-bottom: 1.5px solid $blue;
       transition: all 350ms;
     }
 
