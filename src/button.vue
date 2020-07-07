@@ -51,6 +51,7 @@
   .g-button {
     font-size: $font-size;
     height: $button-height;
+    line-height: 1em;
     padding: 0 1em;
     border-radius: $border-radius;
     border: 1px solid $border-color;
@@ -70,7 +71,7 @@
     }
     > .icon {
       order: 1;
-      margin-right: 0.3em;
+      margin-left: 0.3em;
     }
     > .g-button-content {
       order: 2;
