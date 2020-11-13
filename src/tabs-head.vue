@@ -13,7 +13,7 @@
     inject: ['eventBus'],
     mounted() {
       this.eventBus.$on('update:selected', (item, vm) => {
-        let {width, height, top, left} = vm.$el.getBoundingClientRect()
+        let {width, left} = vm.$el.getBoundingClientRect()
         this.$refs.line.style.width = `${width}px`
         this.$refs.line.style.left = `${left}px`
       })
@@ -22,7 +22,7 @@
 </script>
 <style lang="scss" scoped>
   $tab-height: 40px;
-  $blue: blue;
+  $green: #3eaf7c;
   $border-color: #ddd;
   .tabs-head {
     display: flex;
@@ -34,7 +34,7 @@
     > .line {
       position: absolute;
       bottom: 0;
-      border-bottom: 1.5px solid $blue;
+      border-bottom: 1.5px solid $green;
       transition: all 350ms;
     }
 

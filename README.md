@@ -15,8 +15,8 @@
     ```
     *,*::before,*::after{box-sizing:border-box}
     ```
-    IE 8及以上浏览器都支持此样式
-    你还需要设置默认颜色等变量（后续会改为SCSS变量）
+    IE 8及以上浏览器都支持此样式\
+    你还需要设置默认颜色等变量
     ```
     html {
         --button-height: 32px;

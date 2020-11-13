@@ -1,6 +1,6 @@
 <template>
   <div class="response-wrapper">
-    <img src="../response.gif" alt="响应式效果">
+    <img src="../public/response.gif" alt="响应式效果">
   </div>
 </template>
 

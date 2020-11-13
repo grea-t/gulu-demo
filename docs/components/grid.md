@@ -50,6 +50,7 @@ title: 'Grid - 栅格'
 ### Row 选项
 #### 1. gutter（排水沟；槽）
 通过给 Row 设置<span style='color:#3eaf7c;background-color:#F8F8F8'> gutter </span>属性, 可以让栅格有间隔。单位为<span style='color:#3eaf7c;background-color:#F8F8F8'> px </span>。    
+
 预览  
 <ClientOnly>
   <gutter-demo></gutter-demo>
@@ -87,6 +88,7 @@ title: 'Grid - 栅格'
 ```
 #### 2. align
 通过给 Row 设置<span style='color:#3eaf7c;background-color:#F8F8F8'> align </span>属性, 可以定义其子组件在该节点里面的排版方式。  
+
 预览  
 <ClientOnly>
   <align-demo></align-demo>
@@ -128,10 +130,10 @@ title: 'Grid - 栅格'
 #### 1. span
 栅格系统中的列是指 1 到 24 的值来表示其跨越的范围。通过设置<span style='color:#3eaf7c;background-color:#F8F8F8'> span </span>属性来实现。
 例如：三个等宽的列可以使用`<i-col span="8">列</i-col>` 来创建其中一个，其余两个再复制两份。
-
 #### 2. offset
 使用<span style='color:#3eaf7c;background-color:#F8F8F8'> offset </span>属性,可以将列向右侧偏。  
 例如，`offset="4"` 将元素向右侧偏移了 4 个列（column）的宽度。  
+
 预览
 <ClientOnly>
     <offset-demo></offset-demo>
@@ -168,12 +170,11 @@ title: 'Grid - 栅格'
   }
 </style>
 ```
-
-
 #### 3. 响应式
 支持ipad 、narrowPc 、pc 、widePc 四种设备的响应式设置。  
 若不给 Col 这四个属性，默认为 手机端响应，span值为24。  
-<span style='color:red;'>注意： 若设置这四个属性，则需要对应属性 + offset 的值的和为24，具体看代码。</span>  
+<span style='color:red;'>注意：</span>  若设置这四个属性，则需要对应属性<span style='color:#3eaf7c;background-color:#F8F8F8'> offset </span>的值的和为24，具体看代码。 
+
 预览
 <ClientOnly>
     <response-demo></response-demo>

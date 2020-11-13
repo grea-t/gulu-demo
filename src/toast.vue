@@ -105,6 +105,7 @@
   }
 
   .wrapper {
+    z-index: 20;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -151,6 +152,7 @@
     border-radius: 4px;
     color: white;
     padding: 0 16px;
+    cursor: pointer;
 
     .message {
       padding: 8px 0
