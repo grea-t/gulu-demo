@@ -6,9 +6,11 @@
 <script>
   export default {
     name: 'GuluTabsBody',
-    inject:['eventBus']
+    inject: ['eventBus']
   }
 </script>
 <style lang="scss" scoped>
+  .tabs-body {
 
+  }
 </style>

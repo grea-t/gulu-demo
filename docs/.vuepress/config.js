@@ -19,6 +19,7 @@ module.exports = {
       },
       {
         title: '组件',
+        sidebarDepth: 0,
         children: [
           '/components/button',
           '/components/grid',

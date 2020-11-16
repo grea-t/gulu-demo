@@ -16,7 +16,7 @@ title: 'Tabs - 标签'
     <g-tabs :selected.sync="selectedTab">
       <g-tabs-head>
         <g-tabs-item name='tab1'>
-          <g-icon icon-name="settings"></g-icon>
+          <g-icon name="setting"></g-icon>
           Tab1
         </g-tabs-item>
         <g-tabs-item name='tab2'>Tab2</g-tabs-item>
